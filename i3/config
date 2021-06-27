@@ -211,3 +211,14 @@ exec urxvtc -name htop_scratchpad -e htop
 
 # disable autofocus based on cursor
 focus_follows_mouse no
+
+# Theme colors
+#  	        border	bground	text 	indicator 	child_border
+client.focused #1187ee #25252c #ffffff #1187ee
+client.focused_inactive #ffffff #25252c #ffffff #1187ee
+client.unfocused #25252c #25252c #ffffff #1187ee
+client.urgent #ff0000 #25252c #ffffff #1187ee
+client.placeholder #ffffff #25252c #ffffff #1187ee
+
+client.background #25252c
+title_align center
