@@ -27,3 +27,10 @@ export KEYTIMEOUT=1
 
 # changing cursor for normal and insert mode
 autoload -Uz cursor_mode  && cursor_mode
+
+# setup hjkl to navigate auto completion menu
+zmodload zsh/complist
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
