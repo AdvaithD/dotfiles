@@ -9,6 +9,8 @@ autoload -Uz compinit; compinit
 _comp_options+=(globdots)
 source ~/dotfiles/zsh/external/completion.zsh
 
+export PATH=$PATH:~/.yarn/bin
+
 fpath=($ZDOTDIR/external $fpath)
 
 autoload -Uz prompt_purification_setup; prompt_purification_setup
