@@ -13,3 +13,8 @@ ln -sf "$HOME/dotfiles/zsh/aliases" "$HOME/.config/zsh/aliases"
 
 rm -rf "$HOME/.config/zsh/external"
 ln -sf "$HOME/dotfiles/zsh/external" "$HOME/.config/zsh"
+
+# xmodmap trial
+rm -rf "$HOME/.xmodmap"
+ln -sf "$HOME/dotfiles/.xmodmap" ~/
+xmodmap ~/.xmodmap
