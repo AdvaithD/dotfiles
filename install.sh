@@ -18,3 +18,7 @@ ln -sf "$HOME/dotfiles/zsh/external" "$HOME/.config/zsh"
 rm -rf "$HOME/.xmodmap"
 ln -sf "$HOME/dotfiles/.xmodmap" ~/
 xmodmap ~/.xmodmap
+
+# tmux
+mkdir -p "$XDG_CONFIG_HOME/tmux"
+ln -sf "$DOTFILES/tmux/.tmux.conf" "$XDG_CONFIG_HOME/tmux/tmux.conf"
