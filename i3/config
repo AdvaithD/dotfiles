@@ -32,6 +32,8 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+exec --no-startup-id pulseaudio
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -43,7 +45,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -192,12 +194,14 @@ bar {
 }
 
 # Display wallpaper
-# feh exec_always feh --bg-fill ~/Downloads/WP_MANDAQUA_I-2560x1440_00000.jpg
+exec --no-startup-id feh --bg-scale ~/Downloads/newwp.png
 # new feh config
-exec --no-startup-id feh --no-fehbg --bg-fill \
-~/.config/i3/feh/warrior.png
+# exec --no-startup-id feh --no-fehbg --bg-fill \
+# ~/setup/wallpapers/warrior.png
+# lemur feh
+# feh exec_always feh --bg-fill ~/setup/wallpapers/warrior.png
 
-set $i3lockwall sh ~/.config/i3/scripts/lock.sh
+# set $i3lockwall sh ~/.config/i3/scripts/lock.sh
 
 # lock keystroke
 bindsym $mod+CTRL+Shift+l exec --no-startup-id $i3lockwall
@@ -225,3 +229,6 @@ client.placeholder #ffffff #25252c #ffffff #1187ee
 
 client.background #25252c
 title_align center
+
+# Moving workspaces between screens
+bindsym $mod+p move workspace to output right

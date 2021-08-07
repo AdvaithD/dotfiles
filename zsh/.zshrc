@@ -10,6 +10,9 @@ _comp_options+=(globdots)
 source ~/dotfiles/zsh/external/completion.zsh
 
 export PATH=$PATH:~/.yarn/bin
+export PATH=$PATH:~/usr/bin/python3
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
 fpath=($ZDOTDIR/external $fpath)
 
@@ -36,3 +39,9 @@ bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
+
+# setup external monitor 
+xrandr --output
+xrandr --output HDM1-1 --auto --right-of eDP-1
+
+alias displayoff='xrandr --output HDMI-1 --off'
