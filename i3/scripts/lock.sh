@@ -1,6 +1,6 @@
 #!/bin/sh
 
-img=~/dev/wallpapers/warrior.png
+img=~/setup/wallpapers/warrior.png
 
 convert $img -scale 10% -scale 1000% $img
 

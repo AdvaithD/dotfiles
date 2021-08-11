@@ -1,0 +1,7 @@
+require('config.colorscheme')
+require('config.completion')
+require('config.fugitive')
+require('config.compe')
+require('config.lspkind')
+require('config.treesitter')
+require('config.zen')
