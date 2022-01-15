@@ -9,6 +9,7 @@ autoload -Uz compinit; compinit
 _comp_options+=(globdots)
 source ~/dotfiles/zsh/external/completion.zsh
 
+export SOLC_VERSION=0.7.6
 export PATH=$PATH:~/.yarn/bin
 export PATH=$PATH:~/usr/bin/python3
 export GOPATH=$HOME/go
