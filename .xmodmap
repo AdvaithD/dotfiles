@@ -7,3 +7,12 @@ keysym Control_L = Caps_Lock
 keysym Caps_Lock = Control_L
 add Lock = Caps_Lock
 add Control = Control_L
+
+!
+! wasd and right shift
+!
+keycode 62 = Mode_switch
+keysym a = a A Left
+keysym d = d D Right
+keysym s = s S Down
+keysym w = w W Up
